@@ -102,7 +102,8 @@ public class FrLogin extends Fragment implements View.OnClickListener {
             case R.id.btnregister :
                 MainActivity mainActivity = (MainActivity) getActivity();
 //                mainActivity.setFrRegister();
-                mainActivity.addFragment(new FrRegister() ,false ,"fr_register");
+                mainActivity.replaceFragment(new FrRegister() ,"fr_register");
+
                 break;
         }
     }

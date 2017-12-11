@@ -40,12 +40,12 @@ public class FrRegister extends Fragment implements View.OnClickListener {
     }
 
     private void initView(View view) {
-        btnRegister = view.findViewById(R.id.btn_cf_register);
-        edtAddr = view.findViewById(R.id.edt_register_address);
-        edtFullname = view.findViewById(R.id.edt_register_fullname);
-        edtUseName = view.findViewById(R.id.edt_register_Usernam);
-        edtPass = view.findViewById(R.id.edt_register_Pass);
-        edtPhoneNum = view.findViewById(R.id.edt_register_phonenumber);
+        btnRegister = (Button) view.findViewById(R.id.btn_cf_register);
+        edtAddr = (EditText) view.findViewById(R.id.edt_register_address);
+        edtFullname = (EditText) view.findViewById(R.id.edt_register_fullname);
+        edtUseName = (EditText) view.findViewById(R.id.edt_register_Usernam);
+        edtPass = (EditText) view.findViewById(R.id.edt_register_Pass);
+        edtPhoneNum = (EditText) view.findViewById(R.id.edt_register_phonenumber);
         btnRegister.setOnClickListener(this);
     }
 
@@ -81,9 +81,8 @@ public class FrRegister extends Fragment implements View.OnClickListener {
                     frLogin.setArguments(bundle);
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.fr_placeholder, frLogin).commit();
-
-
             }
+
             });
         builder.show();
         }

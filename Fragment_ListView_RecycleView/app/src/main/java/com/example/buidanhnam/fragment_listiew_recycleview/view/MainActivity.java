@@ -16,24 +16,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         frLogin = new FrLogin();
-        addFragment(frLogin, true , "frlogin");
+        replaceFragment(frLogin , "frlogin");
     }
 
-    public FrRegister getFrRegister() {
-        return frRegister;
-    }
 
-    public void setFrRegister(FrRegister frRegister) {
-        this.frRegister = frRegister;
-    }
-
-    public FrLogin getFrLogin() {
-        return frLogin;
-    }
-
-    public void setFrLogin(FrLogin frLogin) {
-        this.frLogin = frLogin;
-    }
 
     public void addFragment(Fragment fr , boolean isAddToBackTack , String tag) {
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -49,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fr_placeholder , fr , tag);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
+
 }
