@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.buidanhnam.networdconnect.MainActivity">
+
+     <EditText
+         android:layout_marginTop="30dp"
+         android:layout_width="match_parent"
+         android:id="@+id/edt_link"
+         android:layout_height="50dp"
+         />
+
+     <Button
+         android:id="@+id/btn_dowload"
+         android:layout_width="200dp"
+         android:text="Start Dowload "
+         android:layout_gravity="center"
+         android:layout_height="50dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:id="@+id/img_show_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ProgressBar
+            android:layout_width="50dp"
+            android:id="@+id/progress"
+            android:visibility="invisible"
+            android:layout_centerInParent="true"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

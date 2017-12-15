@@ -1,5 +1,4 @@
 package com.example.buidanhnam.thread_asytask;
-
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
@@ -72,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         MyAsynctask myAsynctask = new MyAsynctask(this);
         myAsynctask.setUpdateUI(this);
         myAsynctask.execute(timer);
+        myAsynctask.cancel(true);
 
     }
     @Override
@@ -89,10 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             timer --;
         }
         handler.sendEmptyMessage(COUNT_DONE);
-
     }
-
-
     @Override
     public void updateTimer(int timeCurent) {
         tvCount.setText(timeCurent + "");

@@ -58,7 +58,6 @@ public class MyAsynctask extends AsyncTask<Integer , Integer , Void> {
             updateUI.updateTimer(value);
 //        }
 
-
     }
 
     @Override
